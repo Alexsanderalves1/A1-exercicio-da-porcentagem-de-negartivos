@@ -1,0 +1,30 @@
+soma =  0
+positivos = 0
+negativos = 0
+numeros = []
+
+while True:
+    numero = float(input("Digite um número decimal : "))
+    if numero == 0:
+        break
+
+    numeros.append(numero)
+    soma += numero
+
+    if numero > 0:
+        positivos += 1
+    else:
+        negativos += 1
+
+if len(numeros) == 0:
+    print("Não foi digitado nenhum número!")
+else:
+    media = soma / len(numeros)
+    perc_positivos = positivos / len(numeros) * 100
+    perc_negativos = negativos / len(numeros) * 100
+
+    print(f"Média aritmética: {media:.2f}")
+    print(f"Quantidade de valores positivos: {positivos}")
+    print(f"Quantidade de valores negativos: {negativos}")
+    print(f"Percentual de valores positivos: {perc_positivos:.2f}%")
+    print(f"Percentual de valores negativos: {perc_negativos:.2f}%")
